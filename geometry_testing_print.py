@@ -32,7 +32,7 @@ def equilateral_triangle_metrics(side):
     inradius = (side * sqrt(3)) / 6
     return area, height, circumradius, inradius
 
-# Unit tests for the above functions
+# Юнит тесты
 class TestGeometryTasks(unittest.TestCase):
     def test_right_triangle_perimeter_and_area(self):
         self.assertEqual(right_triangle_perimeter_and_area(3, 4), (12, 6))
