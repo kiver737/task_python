@@ -130,5 +130,8 @@ https://metanit.com/python/tutorial/2.7.php
    python3 task_if_elif_python_two.py
    python3 cycles.py
    python3 neste_loops.py
+   python3 Euclid_algorithm.py
+   python3 def_tasks.py
+   
    
 
