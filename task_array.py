@@ -32,7 +32,7 @@ def transform_real_numbers(arr):
         if num > 0:
             transformed.append(num ** 2)
         else:
-            transformed.append(abs(num))
+            transformed.append(-num)
     print(f"Исходный массив: {arr}")
     print(f"Преобразованный массив: {transformed}")
 
@@ -65,12 +65,18 @@ def find_most_frequent_smallest_number(arr):
             frequency[num] += 1
         else:
             frequency[num] = 1
-    max_freq = max(frequency.values())
+    
+    max_freq = None
     smallest_number = float('inf')
     for num, freq in frequency.items():
-        if freq == max_freq and num < smallest_number:
+        if max_freq is None or freq > max_freq:
+            max_freq = freq
             smallest_number = num
+        elif freq == max_freq and num < smallest_number:
+            smallest_number = num
+            
     print(f"Наиболее часто встречающееся наименьшее число: {smallest_number}")
+
 
 if __name__ == "__main__":
     # З_1
